@@ -72,7 +72,12 @@ card.addEventListener('click', (e) => {
 
 // step 3: prevent default action
 
+const stopLink = document.querySelector(".menu-item");
 
+stopLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("stopped the link");
+})
 
 
 // extra scroll event
