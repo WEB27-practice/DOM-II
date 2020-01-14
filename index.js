@@ -10,7 +10,18 @@
 // the element  the event  the code we want to run
 
 // mouse events 
+const catImage = document.querySelector('.card-img-top');
+console.log(catImage);
 
+catImage.addEventListener('mouseenter', () => {
+    catImage.style.transform = "scale(1.2)";
+    catImage.style.transition = "transform 0.3s";
+})
+
+catImage.addEventListener('mouseleave', () => {
+    catImage.style.transform = "scale(1)";
+    catImage.style.transition = "transform 0.3s";
+})
 // click event 
 
 // double click event
