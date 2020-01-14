@@ -43,9 +43,32 @@ window.addEventListener("resize", () => {
   dogsRule.src = "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
 });
 
-console.log(window);
+// console.log(window);
 
 // step 2: Stop propogation
+
+const body = document.querySelector('body')
+
+body.addEventListener('click', () => {
+    body.style.backgroundColor="papayawhip";
+    console.log("me last!")
+})
+
+const cardGroup = document.querySelector('.card-group');
+
+cardGroup.addEventListener('click', () => {
+    cardGroup.style.backgroundColor ="blue";
+    console.log('me second');
+})
+
+const card = document.querySelector('.card');
+
+card.addEventListener('click', (e) => {
+    // console.log(e.target);
+    card.style.backgroundColor = "pink";
+    console.log('me first');
+    e.stopPropagation();
+})
 
 // step 3: prevent default action
 
